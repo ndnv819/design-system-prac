@@ -1,47 +1,47 @@
 {
-  "root": true,
-  "env": { "node": true, "es6": true },
-  "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "next/core-web-vitals",
-    "plugin:prettier/recommended"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "sourceType": "module"
-  },
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "simple-import-sort",
-    "unused-imports",
-    "import"
-  ],
-  "rules": {
-    // prettier
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ],
-    // unused-imports
-    "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ],
-    // react
-    "react/jsx-props-no-spreading": "off" // "on" 인 경우, <Component {...props} /> 불가
-  }
+	"root": true,
+	"env": { "node": true, "es6": true },
+	"extends": [
+		"airbnb",
+		"airbnb-typescript",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:import/recommended",
+		"plugin:import/typescript",
+		"next/core-web-vitals",
+		"prettier",
+		"plugin:prettier/recommended"
+	],
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"sourceType": "module"
+	},
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "simple-import-sort", "unused-imports", "import", "prettier"],
+	"rules": {
+		// prettier
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+		// unused-imports
+		"no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+		"unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"varsIgnorePattern": "^_",
+				"args": "after-used",
+				"argsIgnorePattern": "^_"
+			}
+		],
+		// import 
+		"import/prefer-default-export": "off",
+		// react
+		"react/jsx-props-no-spreading": "off", // "on" 인 경우, <Component {...props} /> 불가
+		"react/jsx-no-constructed-context-values": "off",
+		"react/display-name": "off"
+	}
 }
